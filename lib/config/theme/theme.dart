@@ -4,8 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
   static const Color primaryColor = Color(0xFF0079FE);
-  static const Color secondaryColor = Color(0xFF252525);
+  static const Color secondaryColor = Color(0xFF090F1F);
   static const Color backgroundLight = Color(0xFFFFFFFF);
+  static const Color greyColor = Color(0x80000000);
+  static const Color orangeColor = Color(0xFFF95B1C);
+  static Color orangLightColor = orangeColor.withOpacity(0.05);
+  static const Color greenColor = Color(0xFF3A813F);
 
   static final ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,

@@ -1,13 +1,14 @@
+import 'package:ahmed_mossad_flutter_task/features/home/presentation/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 final GoRouter appRouter = GoRouter(
-  initialLocation: '/splash',
+  initialLocation: '/home',
   routes: [
     GoRoute(
-      path: '/splash',
-      name: 'splash',
-      // pageBuilder: (context, state) => buildTransitionPage(const SplashPage()),
+      path: '/home',
+      name: 'home',
+      pageBuilder: (context, state) => buildTransitionPage(const HomePage()),
     ),
   ],
 );
