@@ -71,7 +71,7 @@ class AppTextStyles {
   static TextStyle titleSmall({Color? color}) => GoogleFonts.tajawal(
     fontSize: 14.sp,
     fontWeight: FontWeight.w500,
-    height: 1.2,
+    height: 1,
     color: color,
   );
 
@@ -80,21 +80,21 @@ class AppTextStyles {
   static TextStyle bodyLarge({Color? color}) => GoogleFonts.tajawal(
     fontSize: 16.sp,
     fontWeight: FontWeight.w400,
-    height: 1.5,
+    height: 1,
     color: color,
   );
 
   static TextStyle bodyMedium({Color? color}) => GoogleFonts.tajawal(
     fontSize: 14.sp,
     fontWeight: FontWeight.w400,
-    height: 1.4,
+    height: 1,
     color: color,
   );
 
   static TextStyle bodySmall({Color? color}) => GoogleFonts.tajawal(
     fontSize: 12.sp,
     fontWeight: FontWeight.w400,
-    height: 1.3,
+    height: 1,
     color: color,
   );
 
