@@ -48,7 +48,7 @@ class AppTextStyles {
   static TextStyle headlineSmall({Color? color}) => GoogleFonts.tajawal(
     fontSize: 24.sp,
     fontWeight: FontWeight.w600,
-    height: 1.33,
+    height: 1,
     color: color,
   );
 
@@ -64,7 +64,7 @@ class AppTextStyles {
   static TextStyle titleMedium({Color? color}) => GoogleFonts.tajawal(
     fontSize: 16.sp,
     fontWeight: FontWeight.w500,
-    height: 1.3,
+    height: 1,
     color: color,
   );
 
@@ -125,8 +125,8 @@ class AppTextStyles {
 
   static TextStyle button({Color? color}) => GoogleFonts.tajawal(
     fontSize: 16.sp,
-    fontWeight: FontWeight.w600,
-    letterSpacing: 0.5,
+    fontWeight: FontWeight.w700,
+    letterSpacing: 1,
     color: color,
   );
 

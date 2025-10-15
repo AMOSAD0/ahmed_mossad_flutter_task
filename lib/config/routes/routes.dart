@@ -1,4 +1,5 @@
 import 'package:ahmed_mossad_flutter_task/features/home/presentation/pages/home_page.dart';
+import 'package:ahmed_mossad_flutter_task/features/plans_selected/presentation/page/plans_selected_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -9,6 +10,13 @@ final GoRouter appRouter = GoRouter(
       path: '/home',
       name: 'home',
       pageBuilder: (context, state) => buildTransitionPage(const HomePage()),
+    ),
+
+    GoRoute(
+      path: '/plans',
+      name: 'plans',
+      pageBuilder: (context, state) =>
+          buildTransitionPage(const PlansSelectedPage()),
     ),
   ],
 );

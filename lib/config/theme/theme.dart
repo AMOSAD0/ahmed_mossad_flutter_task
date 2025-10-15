@@ -10,6 +10,8 @@ class AppTheme {
   static const Color orangeColor = Color(0xFFF95B1C);
   static Color orangLightColor = orangeColor.withOpacity(0.05);
   static const Color greenColor = Color(0xFF3A813F);
+  static const Color borderColor = Color(0x1A000000);
+  static const Color whiteGreyColor = Color(0xFFF7F7F7);
 
   static final ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,

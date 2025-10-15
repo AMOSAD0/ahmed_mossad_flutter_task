@@ -1,6 +1,7 @@
 import 'package:ahmed_mossad_flutter_task/features/home/presentation/pages/explore_offers_page.dart';
 import 'package:ahmed_mossad_flutter_task/features/home/presentation/widgets/custom_bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,7 +17,6 @@ class _HomePageState extends State<HomePage> {
     const ExploreOffersPage(),
     const MyAdsScreen(),
     const ChatScreen(),
-    const MainScreen(),
     const MainScreen(),
   ];
 
@@ -35,7 +35,11 @@ class _HomePageState extends State<HomePage> {
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
-            _currentIndex = index;
+            if (index == 4) {
+              context.pushNamed('plans');
+            } else {
+              _currentIndex = index;
+            }
           });
         },
       ),
