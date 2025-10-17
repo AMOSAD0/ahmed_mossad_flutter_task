@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class FilterChipWidget extends StatelessWidget {
   final String label;
   final bool isSelected;
+  final String image;
   final VoidCallback onTap;
 
   const FilterChipWidget({
@@ -13,6 +14,7 @@ class FilterChipWidget extends StatelessWidget {
     required this.label,
     required this.isSelected,
     required this.onTap,
+    required this.image,
   }) : super(key: key);
 
   @override
@@ -32,7 +34,7 @@ class FilterChipWidget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: Colors.transparent, width: 2),
               ),
-              child: const Icon(Icons.image, size: 30, color: Colors.grey),
+              child: Image.asset(image),
             ),
             SizedBox(height: 8.h),
             Text(

@@ -40,8 +40,6 @@ class PackageFeatures extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [SubscribersBadge(count: package.subscribersCount)],
           ),
-
-        // if (package.badge != null) BadgeWidget(text: package.badge!),
       ],
     );
   }

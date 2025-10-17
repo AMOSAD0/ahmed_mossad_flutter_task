@@ -110,7 +110,7 @@ class AppTextStyles {
   static TextStyle labelMedium({Color? color}) => GoogleFonts.tajawal(
     fontSize: 12.sp,
     fontWeight: FontWeight.w500,
-    height: 1.3,
+    height: 1,
     color: color,
   );
 

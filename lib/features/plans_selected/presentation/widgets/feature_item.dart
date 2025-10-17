@@ -1,7 +1,6 @@
 import 'package:ahmed_mossad_flutter_task/config/theme/text_styles.dart';
 import 'package:ahmed_mossad_flutter_task/config/theme/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -15,31 +14,32 @@ class FeatureItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isHighlighted = text.contains('خلال ال48 ساعة القادمة');
+    final screenWidth = MediaQuery.of(context).size.width;
 
+    final itemWidth = screenWidth < 360
+        ? screenWidth * 0.85
+        : screenWidth < 400
+        ? 150.w
+        : 200.w;
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8),
-      child: Row(
+      padding: EdgeInsets.symmetric(vertical: 8.h),
+      child: Wrap(
+        crossAxisAlignment: WrapCrossAlignment.center,
+        spacing: 4.w,
         children: [
-          SizedBox(
-            height: 24.h,
-            width: 24.w,
-            child: Padding(
-              padding: EdgeInsets.all(3.5.r),
-              child: SvgPicture.asset(icon),
-            ),
-          ),
-          SizedBox(width: 8.w),
+          SizedBox(height: 16.h, width: 16.w, child: SvgPicture.asset(icon)),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ConstrainedBox(
-                constraints: BoxConstraints(maxWidth: 200.w),
+                constraints: BoxConstraints(maxWidth: itemWidth),
                 child: Text(
-                  text,
+                  text.replaceAll('خلال ال48 ساعة القادمة', ''),
                   textAlign: TextAlign.right,
                   style: AppTextStyles.titleSmall(
                     color: AppTheme.secondaryColor,
                   ),
+                  softWrap: true,
                 ),
               ),
               if (isHighlighted)
