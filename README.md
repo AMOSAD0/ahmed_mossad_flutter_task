@@ -20,11 +20,10 @@ The project demonstrates best practices in Flutter app development — including
 
 ## 📱 Screenshots
 
-```markdown
+
 ![Home Screen](screenshots/home.jpg)
 
 ![Plans Screen](screenshots/plan.jpg)
 ![Plans2 Example](screenshots/plan2.jpg)
 
 ![Filter Screen](screenshots/filter.jpg)
-```
