@@ -14,14 +14,13 @@ class PlansSelectedPage extends StatelessWidget {
     final packages = _getMockPackages();
 
     return Scaffold(
+      appBar: SubscriptionAppBar(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.w),
             child: Column(
               children: [
-                SizedBox(height: 17.5.h),
-                const SubscriptionHeader(),
                 SizedBox(height: 20.h),
                 Column(
                   children: packages.map((package) {
@@ -40,18 +39,18 @@ class PlansSelectedPage extends StatelessWidget {
                 ),
 
                 const BottomInfoSection(),
-                SizedBox(height: 20.h),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 12.h),
-                  child: CustomPrimaryButton(
-                    text: 'التالى',
-                    icon: Icons.arrow_forward,
-                    onPressed: () {},
-                  ),
-                ),
+                SizedBox(height: 200.h),
               ],
             ),
           ),
+        ),
+      ),
+      bottomSheet: Padding(
+        padding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 16.w),
+        child: CustomPrimaryButton(
+          text: 'التالى',
+          icon: Icons.arrow_forward,
+          onPressed: () {},
         ),
       ),
     );

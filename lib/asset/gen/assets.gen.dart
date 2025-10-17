@@ -62,6 +62,9 @@ class $AssetsSvgGen {
   SvgGenImage get chevronRight =>
       const SvgGenImage('assets/svg/chevron_right.svg');
 
+  /// File path: assets/svg/close_small.svg
+  SvgGenImage get closeSmall => const SvgGenImage('assets/svg/close_small.svg');
+
   /// File path: assets/svg/dataset.svg
   SvgGenImage get dataset => const SvgGenImage('assets/svg/dataset.svg');
 
@@ -109,6 +112,7 @@ class $AssetsSvgGen {
     chat,
     chevronBackward,
     chevronRight,
+    closeSmall,
     dataset,
     discount,
     favorite,

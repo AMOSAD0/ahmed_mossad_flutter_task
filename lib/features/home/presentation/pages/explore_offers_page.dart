@@ -2,12 +2,14 @@ import 'package:ahmed_mossad_flutter_task/asset/gen/assets.gen.dart';
 import 'package:ahmed_mossad_flutter_task/config/theme/text_styles.dart';
 import 'package:ahmed_mossad_flutter_task/config/theme/theme.dart';
 import 'package:ahmed_mossad_flutter_task/features/home/presentation/widgets/category_tab.dart';
+import 'package:ahmed_mossad_flutter_task/features/home/presentation/widgets/explore_offers_app_bar.dart';
 import 'package:ahmed_mossad_flutter_task/features/home/presentation/widgets/filter_chip.dart';
 import 'package:ahmed_mossad_flutter_task/features/home/presentation/widgets/free_shipping_banner.dart';
 import 'package:ahmed_mossad_flutter_task/features/home/presentation/widgets/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 
 class ExploreOffersPage extends StatefulWidget {
   const ExploreOffersPage({Key? key}) : super(key: key);
@@ -52,10 +54,10 @@ class _ExploreOffersPageState extends State<ExploreOffersPage>
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: ExploreOffersAppBar(),
         body: Column(
           children: [
-            SizedBox(height: 38.h),
-            _buildAppBar(),
+            SizedBox(height: 12.h),
             _buildCategoryTabs(),
             _buildFilterChips(),
             FreeShippingBanner(),
@@ -63,37 +65,6 @@ class _ExploreOffersPageState extends State<ExploreOffersPage>
             Expanded(child: _buildProductGrid()),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget _buildAppBar() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            'استكشاف العروض',
-            style: AppTextStyles.titleMedium(color: AppTheme.secondaryColor),
-          ),
-          Row(
-            children: [
-              Text(
-                'الكل',
-                style: AppTextStyles.titleMedium(
-                  color: AppTheme.greyColor,
-                ).copyWith(fontWeight: FontWeight.w700),
-              ),
-              SizedBox(width: 2.w),
-              SvgPicture.asset(
-                Assets.svg.arrowBack.path,
-                height: 15.16.h,
-                width: 15.57.w,
-              ),
-            ],
-          ),
-        ],
       ),
     );
   }
