@@ -1,3 +1,4 @@
+import 'package:ahmed_mossad_flutter_task/features/filtering/presentation/page/filter_page.dart';
 import 'package:ahmed_mossad_flutter_task/features/home/presentation/pages/home_page.dart';
 import 'package:ahmed_mossad_flutter_task/features/plans_selected/presentation/page/plans_selected_page.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,12 @@ final GoRouter appRouter = GoRouter(
       name: 'plans',
       pageBuilder: (context, state) =>
           buildTransitionPage(const PlansSelectedPage()),
+    ),
+
+    GoRoute(
+      path: '/filter',
+      name: 'filter',
+      pageBuilder: (context, state) => buildTransitionPage(const FilterPage()),
     ),
   ],
 );
