@@ -20,10 +20,12 @@ The project demonstrates best practices in Flutter app development — including
 
 ## 📱 Screenshots
 
+<div align="center">
 
-![Home Screen](screenshots/home.jpg)
+  <img src="screenshots/home.jpg" alt="Home Screen" width="250"/>
+  <img src="screenshots/plan.jpg" alt="Plans Screen" width="250"/>
+  <img src="screenshots/plan2.jpg" alt="Plans2 Example" width="250"/>
+  <img src="screenshots/filter.jpg" alt="Filter Screen" width="250"/>
 
-![Plans Screen](screenshots/plan.jpg)
-![Plans2 Example](screenshots/plan2.jpg)
+</div>
 
-![Filter Screen](screenshots/filter.jpg)
