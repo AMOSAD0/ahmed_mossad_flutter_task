@@ -15,9 +15,9 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> _screens = [
     const ExploreOffersPage(),
-    const MyAdsScreen(),
     const ChatScreen(),
-    const MainScreen(),
+    const MyAdsScreen(),
+    const MyAdsScreen(),
   ];
 
   @override
@@ -47,15 +47,6 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-// Placeholder screens
-class AccountScreen extends StatelessWidget {
-  const AccountScreen({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return const Center(child: Text('حسابي'));
-  }
-}
-
 class MyAdsScreen extends StatelessWidget {
   const MyAdsScreen({Key? key}) : super(key: key);
   @override
@@ -77,13 +68,5 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(child: Text('محادثة'));
-  }
-}
-
-class MainScreen extends StatelessWidget {
-  const MainScreen({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return const Center(child: Text('الرئيسية'));
   }
 }
